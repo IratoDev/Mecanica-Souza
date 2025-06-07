@@ -1,0 +1,437 @@
+#Sobre .BoxImagem {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+#Sobre .BoxImagem img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#Sobre .BoxTexto {
+  width: 100%;
+  max-width: 650px;
+  padding: 0 1rem;
+  border: 1px solid red;
+}
+#Sobre .BoxTexto h5 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeSubtitulo);
+  font-weight: var(--weightSubTitulo);
+  color: #e51a2c;
+}
+#Sobre .BoxTexto h1 {
+  font-family: var(--fontTitulo);
+  font-size: var(--sizeTitulo);
+  font-weight: var(--weightTitulo);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+#Sobre .BoxTexto p {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+#Sobre .BoxTexto ul {
+  margin-bottom: 1rem;
+}
+#Sobre .BoxTexto ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#Sobre .BoxTexto ul li svg {
+  fill: #e51a2c;
+}
+#Sobre .BoxTexto .BoxIconePhone {
+  width: 30px;
+  height: 30px;
+}
+#Sobre .BoxTexto .BoxIconePhone svg {
+  width: 100%;
+  height: 100%;
+  fill: #e51a2c;
+}
+#Sobre .BoxTexto .BoxTextoContato h3 {
+  font-family: var(--fontTexto);
+  font-size: var(--sizeTexto);
+}
+#Sobre .BoxTexto .BoxTextoContato p {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeSubtitulo);
+  font-weight: var(--weightSubTitulo);
+}
+
+#Galeria .BoxGaleria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+}
+
+#Processo .BoxProcesso {
+  display: flex;
+  position: relative;
+  align-items: end;
+  justify-content: space-around;
+  border: 1px solid red;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+  padding-bottom: 4rem;
+  border-radius: 20px;
+  color: #fff;
+}
+#Processo .BoxProcesso .BoxTextoProcesso {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid green;
+  text-align: center;
+}
+#Processo .BoxProcesso .BoxTextoProcesso h5 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  font-weight: var(--weightSubTitulo);
+  color: #e51a2c;
+}
+#Processo .BoxProcesso .BoxTextoProcesso h1 {
+  font-family: var(--fontTitulo);
+  font-size: var(--sizeTitulo);
+  font-weight: var(--weightSubTitulo);
+  color: #fff;
+  line-height: 1.2;
+}
+#Processo .BoxProcesso .BoxTextoProcesso p {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  font-weight: var(--weightSubTitulo);
+  color: #fff;
+  opacity: 0.8;
+}
+#Processo .BoxProcesso svg {
+  fill: #fff;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#Processo .BoxProcesso video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#Preco .BoxTextoPreco {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 1rem;
+  border: 1px solid red;
+  margin: auto 0;
+}
+#Preco .BoxTextoPreco h5 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  font-weight: var(--weightSubTitulo);
+  color: #e51a2c;
+  margin-bottom: 1rem;
+}
+#Preco .BoxTextoPreco h1 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTitulo);
+  font-weight: var(--weightSubTitulo);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+#Preco .BoxTextoPreco p {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+#Preco .BoxCartaoPreco {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid green;
+}
+
+#Contato .BoxImagem {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid red;
+  border-radius: 20px;
+}
+#Contato .BoxImagem img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#Contato .Boxform {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--colorPrimaria);
+  padding: 2rem;
+  padding-bottom: 6rem;
+  border-radius: 20px;
+  position: relative;
+}
+#Contato .Boxform h5 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  font-weight: var(--weightSubTitulo);
+  color: var(--colorSecundaria);
+}
+#Contato .Boxform h1 {
+  font-family: var(--fontTitulo);
+  font-size: var(--sizeTitulo);
+  font-weight: var(--weightSubTitulo);
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+#Contato .Boxform form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#Contato .Boxform form input, #Contato .Boxform form textarea {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: none;
+  color: var(--tcr-white-color);
+  display: block;
+  width: 100%;
+  height: 55px;
+  font-size: 16px;
+  background-color: var(--colorPrimaria);
+  line-height: normal;
+  margin-bottom: 0px;
+  font-weight: 400;
+  border: transparent;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  border: 1px solid #e3e3e3;
+  padding: 1rem;
+  color: var(--colorGlobal);
+  border-radius: 100px;
+}
+#Contato .Boxform form textarea {
+  height: 140px;
+  resize: none;
+  border-radius: 2rem;
+}
+#Contato .Boxform form .ConteinerButton {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  background: var(--colorGlobal);
+  padding: 20px 20px 0px 20px;
+  border-radius: 35px 35px 0 0;
+}
+#Contato .Boxform form .ConteinerButton::before, #Contato .Boxform form .ConteinerButton::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  height: 40px;
+  width: 20px;
+  box-shadow: 0 20px 0 0 var(--colorGlobal);
+}
+#Contato .Boxform form .ConteinerButton::after {
+  right: 100%;
+  border-bottom-right-radius: 20px;
+}
+#Contato .Boxform form .ConteinerButton::before {
+  left: 100%;
+  border-bottom-left-radius: 20px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 4rem;
+}
+footer .BoxLogoFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 300px;
+}
+footer .BoxLogoFooter .Logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .BoxLogoFooter .Logo h1 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeSubtitulo);
+  font-weight: var(--weightSubTitulo);
+  color: #fff;
+}
+footer .BoxLogoFooter .IconeRedeSocial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(225, 225, 225, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+footer .BoxLogoFooter .IconeRedeSocial svg {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+footer .BoxInfoFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
+footer .BoxInfoFooter h5 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeSubtitulo);
+  font-weight: var(--weightSubTitulo);
+  color: #fff;
+}
+footer .BoxInfoFooter ul {
+  list-style: none;
+  line-height: 1.5;
+}
+footer .BoxInfoFooter ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.5;
+  text-align: center;
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  color: #fff;
+}
+footer .Copy {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  #Sobre .conteinerSobre {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #Preco .ConteinerPreco {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #Contato .ConteinerContato {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  #Sobre {
+    padding: 0 1rem;
+  }
+  #Sobre .BoxImagem {
+    max-width: none;
+  }
+  #Sobre .BoxTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: none;
+  }
+  #Sobre .BoxTexto h1 {
+    font-size: calc(var(--sizeTitulo) / 1.5);
+  }
+  #Processo {
+    padding: 0 1rem;
+  }
+  #Processo .ConteinerProcessos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #Processo .ConteinerProcessos .BoxTextoProcesso {
+    max-width: none;
+  }
+  #Processo svg {
+    rotate: 90deg;
+    margin: 0 auto;
+  }
+  #Preco {
+    padding: 1rem;
+  }
+  #Preco .BoxTextoPreco {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+  #Preco .BoxTextoPreco h1 {
+    font-size: calc(var(--sizeTitulo) / 1.5);
+  }
+  #Contato .BoxImagem {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid red;
+    border-radius: 20px;
+  }
+  #Contato .BoxImagem img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #Contato .Boxform h1 {
+    font-size: calc(var(--sizeTitulo) / 1.5);
+  }
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+  footer .BoxInfoFooter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  footer .BoxInfoFooter h5 {
+    text-align: center;
+  }
+  footer .BoxInfoFooter li {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=Style.module.css.map */

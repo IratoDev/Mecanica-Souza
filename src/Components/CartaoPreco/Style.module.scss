@@ -1,0 +1,79 @@
+
+.BoxInfo{
+border: 1px solid green;
+width: 100%;
+max-width: 45.333%;
+color: #fff;
+
+h3{
+font-family: var(--fontSubTitulo);
+font-size: var(--sizeTexto);
+font-weight: var(--weightSubTitulo);
+color: #fff;  
+margin-top: 0.5rem;  
+}
+
+h1{
+font-family: var(--fontSubTitulo);
+font-size: var(--sizeTitulo);
+font-weight: var(--weightSubTitulo);
+color: #fff;
+}
+
+}
+
+.BoxServicos{
+
+position: relative;
+border: 1px solid blue;
+width: 100%;
+max-width: 63.333%;
+padding-bottom: 4rem;
+
+ul{
+
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 0.5rem;
+
+li{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+width: 40%;
+border: 1px solid #ccc;
+color: #fff;
+
+svg{
+fill: #e51a2c;
+
+}
+
+}
+
+}
+
+button{
+
+position: absolute;
+bottom: 0;
+right: 2rem;
+
+}
+
+}
+
+@media screen and (max-width: 768px) {
+
+.BoxInfo{
+
+h1{
+font-size: calc(var(--sizeTitulo) / 1.5);
+}
+
+}
+
+
+}

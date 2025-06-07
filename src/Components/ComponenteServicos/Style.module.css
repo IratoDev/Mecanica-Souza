@@ -1,0 +1,58 @@
+.ElementoServico {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid red;
+  padding: 0 1rem;
+}
+.ElementoServico .BoxIcone {
+  border: 1px solid red;
+  max-width: 33.333%;
+}
+.ElementoServico .BoxIcone img {
+  width: 100%;
+  height: auto;
+}
+.ElementoServico .BoxText {
+  max-width: 100%;
+  border: 1px solid blue;
+}
+.ElementoServico .BoxText h3 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeSubtitulo);
+  font-weight: var(--weightSubTitulo);
+}
+.ElementoServico .BoxText p {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .ElementoServico {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-width: 100%;
+  }
+  .ElementoServico .BoxIcone {
+    border: 1px solid red;
+    max-width: 30%;
+  }
+  .ElementoServico .BoxText {
+    max-width: 70%;
+  }
+  .ElementoServico .BoxText h3 {
+    font-family: var(--fontSubTitulo);
+    font-size: var(--sizeSubtitulo);
+    font-weight: var(--weightSubTitulo);
+  }
+  .ElementoServico .BoxText p {
+    font-family: var(--fontSubTitulo);
+    font-size: var(--sizeTexto);
+    opacity: 0.8;
+  }
+}/*# sourceMappingURL=Style.module.css.map */

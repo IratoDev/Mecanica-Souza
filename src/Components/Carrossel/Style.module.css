@@ -1,0 +1,126 @@
+@charset "UTF-8";
+.ConteinerCarrosel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.ConteinerCarrosel .Carrosel {
+  width: 100%;
+  overflow: hidden;
+}
+.ConteinerCarrosel .Carrosel .ConteinerImg {
+  display: flex;
+  z-index: -1;
+  width: 100%;
+  height: 80vh;
+  background: var(--colorPrimaria);
+  transition: transform 0.5s ease-in-out;
+}
+.ConteinerCarrosel .Carrosel .ConteinerImg .BoxConteudo {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+.ConteinerCarrosel .Carrosel .ConteinerImg .BoxConteudo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(25, 25, 27) 10%, rgb(25, 25, 27) 30%, rgb(25, 25, 27) 50%, transparent 80%);
+  pointer-events: none; /* evita que interfira em cliques */
+  z-index: 1000; /* fica sobre o conteúdo, ajuste conforme necessário */
+}
+.ConteinerCarrosel .Carrosel .ConteinerImg .BoxConteudo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+  position: relative;
+  z-index: 0;
+}
+.ConteinerCarrosel .Carrosel .ConteinerTexto {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  max-width: 650px;
+  border: 1px solid green;
+  margin-left: 4rem;
+  margin-top: 4rem;
+  transition: transform 0.5s ease-in-out;
+}
+.ConteinerCarrosel .Carrosel .ConteinerTexto .BoxConteudo {
+  padding: 0 1rem;
+  border: 1px solid blue;
+}
+.ConteinerCarrosel .Carrosel .ConteinerTexto .BoxConteudo h5 {
+  font-family: var(--fontTitulo);
+  font-size: var(--sizeText);
+  color: #FFF;
+  font-weight: var(--weightTitulo);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.ConteinerCarrosel .Carrosel .ConteinerTexto .BoxConteudo h1 {
+  font-family: var(--fontTitulo);
+  font-size: var(--sizeTitulo);
+  color: #FFF;
+  font-weight: var(--weightTitulo);
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+.ConteinerCarrosel .Carrosel .ConteinerTexto .BoxConteudo .BoxButton {
+  display: flex;
+  gap: 1rem;
+}
+.ConteinerCarrosel .ButtonNext, .ConteinerCarrosel .ButtonLeft {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  background: #f2f2f2;
+  width: 40px;
+  height: 140px;
+  z-index: 40;
+}
+.ConteinerCarrosel .ButtonNext {
+  right: 0;
+  background: url("../../assets/arrow-bg-right.png") no-repeat;
+  background-size: contain;
+}
+.ConteinerCarrosel .ButtonLeft {
+  left: 0;
+  background: url("../../assets/arrow-bg-left.png") no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .ConteinerCarrosel .Carrosel .ConteinerTexto {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 2rem;
+    height: 100%;
+  }
+  .ConteinerCarrosel .Carrosel .ConteinerTexto .BoxConteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .ConteinerCarrosel .Carrosel .ConteinerTexto .BoxConteudo h5 {
+    font-size: calc((--sizeText) / 1.5);
+  }
+  .ConteinerCarrosel .Carrosel .ConteinerTexto .BoxConteudo h1 {
+    font-size: calc(var(--sizeTitulo) / 1.5);
+    margin-bottom: 1.5rem;
+  }
+}/*# sourceMappingURL=Style.module.css.map */

@@ -1,0 +1,171 @@
+
+
+.ConteinerCarrosel{
+
+display: flex;
+align-items: center;
+width: 100%;
+position: relative;
+
+.Carrosel{
+    
+width: 100%;
+overflow: hidden;
+
+.ConteinerImg{
+
+display: flex;
+z-index: -1;
+width: 100%;
+height: 80vh;
+background: var(--colorPrimaria);
+transition: transform 0.5s ease-in-out;
+
+.BoxConteudo{
+min-width: 100%;
+height: 100%;
+position: relative;
+
+&::after{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(to right,rgba(25, 25, 27, 1) 10%,rgba(25, 25, 27, 1) 30%,rgba(25, 25, 27, 1) 50%,transparent 80%);
+pointer-events: none; /* evita que interfira em cliques */
+z-index: 1000; /* fica sobre o conteúdo, ajuste conforme necessário */  
+}
+
+img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: right;
+position: relative;
+z-index: 0;
+}
+
+}
+
+}
+
+.ConteinerTexto{
+
+display: flex;
+position: absolute;
+top: 0;
+left: 0;
+overflow: hidden;
+max-width: 650px;
+border: 1px solid green;
+margin-left: 4rem;
+margin-top: 4rem;
+
+transition: transform 0.5s ease-in-out;
+
+.BoxConteudo{
+
+padding: 0 1rem;
+border: 1px solid blue;
+
+h5{
+font-family: var(--fontTitulo);
+font-size: var(--sizeText);
+color: #FFF;
+font-weight: var(--weightTitulo);
+line-height: 1.2;
+margin-bottom: 1rem;
+}
+
+h1{
+font-family: var(--fontTitulo);
+font-size: var(--sizeTitulo);
+color: #FFF;
+font-weight: var(--weightTitulo);
+line-height: 1.2;
+margin-bottom: 3rem;
+}
+
+.BoxButton{
+
+display: flex;
+gap: 1rem;
+
+}
+
+}
+
+}
+
+
+}
+
+.ButtonNext, .ButtonLeft{
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 1000;
+background: #f2f2f2;
+width: 40px;
+height: 140px;
+z-index: 40;
+
+
+}
+
+.ButtonNext{
+right: 0;
+background: url("../../assets/arrow-bg-right.png") no-repeat;
+background-size: contain;
+}
+
+.ButtonLeft{
+left: 0;
+background: url("../../assets/arrow-bg-left.png") no-repeat;
+background-size: contain;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+
+.ConteinerCarrosel{
+
+.Carrosel{
+
+.ConteinerTexto{
+
+margin-top: 0;
+margin-left: 0;
+padding: 2rem;
+height: 100%;
+
+.BoxConteudo{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+h5{
+font-size: calc((--sizeText) / 1.5);
+}
+
+h1{
+font-size: calc(var(--sizeTitulo) / 1.5);
+margin-bottom: 1.5rem;
+}
+
+}
+
+}
+}
+
+}
+
+}

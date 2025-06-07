@@ -1,0 +1,16 @@
+
+.ButtonNav{
+font-family: var(Bai Jamjuree) ;
+font-size: var(--sizeSubtitulo);
+font-weight: var(--weightSubTitulo);
+color:var(--colorPrimaria);
+}
+
+@media screen and (max-width: 768px) {
+
+.ButtonNav{
+font-size: calc(var(--sizeSubtitulo) * 2.5);
+}
+
+}
+
