@@ -90,9 +90,7 @@ export function CarroselComponet() {
               <img
                 alt={`imagem_carrosel_${index + 1}`}
                 src={src}
-                loading="eager"
                 decoding="async"
-                style={{ opacity: imagesLoaded ? 1 : 0.5, transition: "opacity 0.5s" }}
               />
             </div>
           ))}
