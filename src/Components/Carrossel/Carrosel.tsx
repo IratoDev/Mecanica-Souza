@@ -23,20 +23,38 @@ const textSlides = [
   },
 ];
 
-
 const images = [Img1, Img2, Img3];
 
 export function CarroselComponet() {
   const [currentItem, setCurrentItem] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Avança o carrossel automaticamente a cada 5 segundos
+  // Verifica o carregamento completo das imagens
   useEffect(() => {
+    let loadedCount = 0;
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, []);
+
+  // Inicia o carrossel automaticamente somente após todas as imagens serem carregadas
+  useEffect(() => {
+    if (!imagesLoaded) return;
+
     const interval = setInterval(() => {
       setCurrentItem((prev) => (prev + 1) % images.length);
     }, 5000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [imagesLoaded]);
 
   // Atualiza posição das imagens
   useEffect(() => {
@@ -47,11 +65,15 @@ export function CarroselComponet() {
   }, [currentItem]);
 
   const nextSlide = () => {
-    setCurrentItem((prev) => (prev + 1) % images.length);
+    if (imagesLoaded) {
+      setCurrentItem((prev) => (prev + 1) % images.length);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentItem((prev) => (prev - 1 + images.length) % images.length);
+    if (imagesLoaded) {
+      setCurrentItem((prev) => (prev - 1 + images.length) % images.length);
+    }
   };
 
   return (
@@ -65,7 +87,13 @@ export function CarroselComponet() {
         <div className={Style.ConteinerImg} ref={imageRef}>
           {images.map((src, index) => (
             <div key={index} className={Style.BoxConteudo}>
-              <img alt={`imagem_carrosel_${index + 1}`} src={src} />
+              <img
+                alt={`imagem_carrosel_${index + 1}`}
+                src={src}
+                loading="eager"
+                decoding="async"
+                style={{ opacity: imagesLoaded ? 1 : 0.5, transition: "opacity 0.5s" }}
+              />
             </div>
           ))}
         </div>
@@ -74,11 +102,9 @@ export function CarroselComponet() {
         <div className={Style.ConteinerTexto}>
           <div className={Style.BoxConteudo}>
             <h5>{textSlides[currentItem].title}</h5>
-            
-              {textSlides[currentItem].subtitle.split("\n").map((line, i) => (
-                <h1 key={i}>{line}</h1>
-              ))}
-            
+            {textSlides[currentItem].subtitle.split("\n").map((line, i) => (
+              <h1 key={i}>{line}</h1>
+            ))}
             <div className={Style.BoxButton}>
               <ButtonComponet text="Read More" />
               <ButtonComponet

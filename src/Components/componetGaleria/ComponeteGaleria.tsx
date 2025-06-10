@@ -11,9 +11,9 @@ const duplicatedItems = [...itensGaleria, ...itensGaleria, ...itensGaleria];
 
 export function CarroselGaleria() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const itemWidth = 320; // largura do item
-  const gap = 16; // gap-4 = 1rem = 16px
-  const fullItemWidth = itemWidth + gap; // largura total real
+  const itemWidth = 320;
+  const gap = 16;
+  const fullItemWidth = itemWidth + gap;
   const [activeIndex, setActiveIndex] = useState(itensGaleria.length);
 
   const isDragging = useRef(false);
@@ -24,19 +24,15 @@ export function CarroselGaleria() {
     const container = containerRef.current;
     if (!container) return;
     const center =
-      fullItemWidth * activeIndex -
-      container.offsetWidth / 2 +
-      fullItemWidth / 2;
+      fullItemWidth * activeIndex - container.offsetWidth / 2 + fullItemWidth / 2;
     container.scrollTo({ left: center, behavior: "smooth" });
   };
 
-  // Centraliza o carrossel no item do meio na montagem
   useEffect(() => {
-scrollToActiveItem()
-}, []);
+    scrollToActiveItem();
+  }, []);
 
-// Detecta qual item está no centro da tela
-const detectCenterItem = () => {
+  const detectCenterItem = () => {
     const container = containerRef.current;
     if (!container) return;
 
@@ -45,23 +41,25 @@ const detectCenterItem = () => {
     setActiveIndex(index);
   };
 
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
-// Loop visual (ouroboros)
-useEffect(() => {
-  const container = containerRef.current;
-  if (!container) return;
+    const middleIndex = itensGaleria.length;
+    if (
+      activeIndex < itensGaleria.length ||
+      activeIndex >= itensGaleria.length * 2
+    ) {
+      const newIndex = middleIndex + (activeIndex % itensGaleria.length);
+      setActiveIndex(newIndex);
 
-  const middleIndex = itensGaleria.length;
-  if (activeIndex < itensGaleria.length || activeIndex >= itensGaleria.length * 2) {
-    const newIndex = middleIndex + (activeIndex % itensGaleria.length);
-    setActiveIndex(newIndex);
+      const newScroll =
+        fullItemWidth * newIndex - container.offsetWidth / 2 + fullItemWidth / 2;
+      container.scrollLeft = newScroll;
+    }
+  }, [activeIndex]);
 
-    const newScroll =
-      fullItemWidth * newIndex - container.offsetWidth / 2 + fullItemWidth / 2;
-    container.scrollLeft = newScroll;
-  }
-}, [activeIndex]);
-
+  // === Mouse Events ===
   const handleMouseDown = (e: React.MouseEvent) => {
     const container = containerRef.current;
     if (!container) return;
@@ -69,11 +67,6 @@ useEffect(() => {
     isDragging.current = true;
     startX.current = e.pageX - container.offsetLeft;
     scrollLeft.current = container.scrollLeft;
-  };
-
-  const handleMouseUp = () => {
-    isDragging.current = false;
-    detectCenterItem();
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -85,11 +78,40 @@ useEffect(() => {
     container.scrollLeft = scrollLeft.current - walk;
   };
 
+  const handleMouseUp = () => {
+    isDragging.current = false;
+    detectCenterItem();
+  };
+
   const handleMouseLeave = () => {
     if (isDragging.current) {
       isDragging.current = false;
       detectCenterItem();
     }
+  };
+
+  // === Touch Events ===
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    isDragging.current = true;
+    startX.current = e.touches[0].pageX - container.offsetLeft;
+    scrollLeft.current = container.scrollLeft;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    const container = containerRef.current;
+    if (!isDragging.current || !container) return;
+
+    const x = e.touches[0].pageX - container.offsetLeft;
+    const walk = (x - startX.current) * 1.5;
+    container.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const handleTouchEnd = () => {
+    isDragging.current = false;
+    detectCenterItem();
   };
 
   return (
@@ -98,13 +120,14 @@ useEffect(() => {
         className="flex gap-4 scrollbar-hide px-4 cursor-grab overflow-hidden"
         ref={containerRef}
         onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
-
-        <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-red-500 opacity-50 z-10 pointer-events-none transform -translate-x-1/2" >
-        </div>
+        <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-red-500 opacity-50 z-10 pointer-events-none transform -translate-x-1/2"></div>
 
         {duplicatedItems.map((item, index) => {
           const isActive = index === activeIndex;
@@ -124,7 +147,6 @@ useEffect(() => {
             </div>
           );
         })}
-
       </div>
     </div>
   );

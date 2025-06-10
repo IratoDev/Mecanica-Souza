@@ -47,14 +47,14 @@ return(
 <main>
 
 {/*Home*/}
-<section className="mt-36">
+<section className="mt-36 px-5 md:px-10">
 
 <CarroselComponet/>
 
 </section>
 
 {/*Serviços*/}
-<section className="flex flex-wrap justify-around px-10 py-10 gap-4">
+<section className="flex flex-wrap justify-around py-10 gap-4 px-5 md:px-10">
 <ComponeteServico icone={<img alt="icone_troca_oleo" src={IconOil}/>} titulo="Troca de Óleo" texto="Lubrificação eficiente com produtos de qualidade para garantir o bom desempenho do motor."/>
 
 <ComponeteServico icone={<img alt="icone_freio" src={IconFreio}/>} titulo="Troca de Pastilha de Freio" texto="Verificação e substituição de pastilhas para uma frenagem precisa e segura."/>
@@ -65,7 +65,7 @@ return(
 </section>
 
 {/*Sobre*/}
-<section id={Style.Sobre} className="py-10 px-10 ">
+<section id={Style.Sobre} className="py-10 px-5 md:px-10 ">
 
 <div className={`${Style.conteinerSobre} flex justify-between flex-wrap gap-4`}>
     <div className={Style.BoxImagem}>
@@ -97,14 +97,14 @@ return(
 </section>
 
 {/*Galeria*/}
-<section id={Style.Galeria} className="py-10 px-10 ">
+<section id={Style.Galeria} className="py-10 px-5 md:px-10 ">
     <div className={Style.BoxGaleria}>
         <CarroselGaleria/>
     </div>
 </section>
 
 {/*Processos*/}
-<section id={Style.Processo} className="py-10 px-10">
+<section id={Style.Processo} className="py-10 px-5 md:px-10">
     <div className="flex flex-wrap justify-between gap-6 w-full">
         
        <div className={Style.BoxProcesso}>
@@ -118,7 +118,7 @@ return(
         <video autoPlay muted loop playsInline>
             <source src={Video} type="video/mp4"/>
         </video>
-        <div className={`${Style.ConteinerProcessos} flex items-start  mb-5 mt-96 gap-4 overflow-hidden`}>
+        <div className={`${Style.ConteinerProcessos} flex items-start  mb-5 gap-4 overflow-hidden md:mt-96 mt-80`}>
         <ComponeteProcesso icone={<img alt="chek-list" src={IconeChcklist}/>} titulo="01. Agendamento" texto="Agende seu serviço de forma rápida e prática, online ou presencialmente."/>
         <MdDoubleArrow /> 
 
@@ -136,7 +136,7 @@ return(
 </section>
 
 {/*Preços*/}
-<section id={Style.Preco} className="py-10 px-10">
+<section id={Style.Preco} className="py-10 px-5 md:px-10">
     <div className={`${Style.ConteinerPreco} flex flex-wrap justify-between gap-6`}>
         <div className={Style.BoxTextoPreco}>
             <h5>Preços</h5>
@@ -157,7 +157,7 @@ return(
 </section>
 
 {/*Contato*/}
-<section id={Style.Contato} className="py-10 px-10">
+<section id={Style.Contato} className="py-10 px-5 md:px-10">
     <div className={`${Style.ConteinerContato} flex  flex-wrap justify-between gap-6 `}>
         <div className={Style.BoxImagem}><img alt="img-contato" src={BgForm}/></div>
 
