@@ -35,6 +35,8 @@ import { LogoComponet } from "../Components/Ux/Logo/LogoComponet"
 
 import { PiSparkleFill } from "react-icons/pi";
 
+import { MensagemWhatsApp } from "../App"
+
 
 import Style from "./Style.module.css"
 
@@ -84,13 +86,13 @@ return(
             <li><PiSparkleFill /> Equipamentos modernos e peças de qualidade</li>
         </ul>
         <div className="flex items-center gap-8 flex-row justify-center">
-            <ButtonComponet text="Read More"/>
+            <ButtonComponet onClick={()=>MensagemWhatsApp("Olá gostaria de saber sobre seus serviços")} text="Saiba Mais"/>
 
             <div className="flex items-center gap-2 py-5">
                 <div className={Style.BoxIconePhone}><FaPhoneAlt/></div>
                 <div className={Style.BoxTextoContato}> 
                     <h3>Fale com a gente:</h3>
-                    <p>+0 123456789</p>
+                    <p>(43) 9969-7488</p>
                 </div>
             </div>
         </div>
@@ -145,7 +147,7 @@ return(
             <h5>Preços</h5>
             <h1>Planos acessíveis para manutenção e serviços mecânicos.</h1>
             <p>Os valores apresentados são preços iniciais e podem variar conforme o modelo do veículo, o estado de conservação e os serviços específicos escolhidos. Para um orçamento preciso, entre em contato diretamente com a nossa equipe.</p>
-            <ButtonComponet text="Read More" style={{ backgroundColor: "#19191b" }}/>
+            <ButtonComponet onClick={()=>MensagemWhatsApp("Olá gostaria de saber mais sobres os planos")} text="Saiba Mais" style={{ backgroundColor: "#19191b" }}/>
         </div>
 
         <div className={Style.BoxCartaoPreco}>
@@ -191,9 +193,11 @@ return(
     <LogoComponet/>
     <div className="flex justify-between gap-4">
 
-        <div className={Style.IconeRedeSocial}><FaFacebook /></div>
-        <div className={Style.IconeRedeSocial}><FaInstagram /></div>
-        <div className={Style.IconeRedeSocial}><FaWhatsapp /></div>
+        <div className={Style.IconeRedeSocial}><a href=""><FaFacebook /></a></div>
+        <div className={Style.IconeRedeSocial}><a href="https://www.instagram.com/autocenter_souza/"><FaInstagram /></a></div>
+        <div className={Style.IconeRedeSocial}><a href="https://wa.me/554391733453" 
+  target="_blank" 
+  rel="noopener noreferrer"><FaWhatsapp /></a></div>
     </div>
     </div>
    
@@ -202,8 +206,8 @@ return(
     <div>
         <h5>Informações de contato</h5>
         <ul>
-            <li> <FaLocationDot/> 2605 Caton Hill Road, Woodbridge, VA 22192</li>
-            <li> <FaPhoneAlt/> 1-800-1234567</li>
+            <li> <FaLocationDot/>Avenida Bento Amaral Monteiro 2256</li>
+            <li> <FaPhoneAlt/>43 9969-7488</li>
             <li> <MdOutlineMailOutline/> officeone@youremail.com</li>
         </ul>
 
@@ -212,9 +216,10 @@ return(
     <div>
         <h5>Horario de funcionamento</h5>
         <ul>
-            <li> <TbClockHour3 /> segunda a sexta das 9hr as 18hr</li>
-            <li> <TbClockHour3 /> sabado das 9hr as 12hr</li>
-            <li> <TbClockHour3 /> domingo: fechado</li>
+            <li> <TbClockHour3 /> Segunda a Sexta das 8:30 as 18:30</li>
+            <li> <TbClockHour3 /> Sabado das 8:30hr as 12:30hr</li>
+            <li> <TbClockHour3 /> Domingo: fechado</li>
+            <li> <TbClockHour3 /> Feriados das 8:30 às 12:30</li>
         </ul>
     </div>
     

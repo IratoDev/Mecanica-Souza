@@ -5,6 +5,8 @@ import { ButtonComponet } from '../Ux/Button/ButtonComponet';
 import { FaClock } from 'react-icons/fa6';
 import Style from './Style.module.css';
 
+import { MensagemWhatsApp } from '../../App';
+
 
 const ComponentePreco = [
   {
@@ -62,7 +64,7 @@ export function CarrosselPreco() {
               </div>
               <div className={Style.BoxServicos}>
                 <p className="mb-4 text-gray-700">{item.servico}</p>
-                <ButtonComponet text="Order Now" />
+                <ButtonComponet onClick={()=>MensagemWhatsApp(`Olá gostaria fazer ${item.titulo}`)} text="Adquira Agora" />
               </div>
             </div>
           </SwiperSlide>

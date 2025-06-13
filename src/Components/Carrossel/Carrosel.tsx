@@ -12,6 +12,8 @@ import Img3 from "../../assets/CarroselHome3.jpg";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+import { MensagemWhatsApp } from "../../App";
+
 const textSlides = [
   {
     title: "[ SERVIÇOS MECÂNICOS ESPECIALIZADOS ]",
@@ -69,9 +71,9 @@ export function CarroselComponet() {
             <h1 key={i}>{line}</h1>
           ))}
           <div className={Style.BoxButton}>
-            <ButtonComponet text="Read More" />
-            <ButtonComponet
-              text="Get appointment"
+            <ButtonComponet onClick={()=>MensagemWhatsApp("Olá gostaria de saber sobre seus serviços")} text="Saiba Mais" />
+            <ButtonComponet onClick={()=>MensagemWhatsApp("Olá gostaria de fazer um orçamento")}
+              text="Faça seu Orçamento"
               style={{ backgroundColor: "transparent", border: "1px solid #fff" }}
             />
           </div>

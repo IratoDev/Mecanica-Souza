@@ -4,6 +4,7 @@ import { LogoComponet } from "../Ux/Logo/LogoComponet";
 
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import Style from "./Style.module.css"; // ainda pode usar o estilo existente se quiser
+import { MensagemWhatsApp } from "../../App";
 
 export function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ export function NavBar() {
 
         {/* Botão de ação */}
         <div className="hidden md:block">
-          <ButtonComponet text="Marcar consulta" />
+          <ButtonComponet onClick={()=>MensagemWhatsApp("Olá gostaria de fazer um orçamento")} text="Marcar consulta" />
         </div>
       </div>
 

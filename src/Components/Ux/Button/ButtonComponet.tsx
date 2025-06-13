@@ -4,9 +4,10 @@ type TextButton = {
 
 text:string;
 style?: React.CSSProperties;
+onClick: () => void;
 }
 
-export function ButtonComponet({text,style}:TextButton){
+export function ButtonComponet({text,style, onClick}:TextButton){
 
 return(
 
@@ -22,6 +23,7 @@ whitespace-nowrap
 font-extrabold
 `}
 style={style}
+onClick={onClick}
 >
 {text}
 </button>
