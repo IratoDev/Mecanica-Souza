@@ -177,7 +177,7 @@ return(
                 <textarea name="" id=""></textarea>
 
                 <div className={Style.ConteinerButton}>
-                <ButtonComponet text="Enviar" style={{width:"150px"}}/>
+                <ButtonComponet onClick={()=> alert("teste de envio de email")} text="Enviar" style={{width:"150px"}}/>
                 </div>
             </form>
         </div>
