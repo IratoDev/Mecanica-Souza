@@ -1,8 +1,6 @@
 #Sobre .BoxImagem {
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  border: 1px solid red;
+  max-width: 450px;
 }
 #Sobre .BoxImagem img {
   width: 100%;
@@ -14,7 +12,6 @@
   width: 100%;
   max-width: 650px;
   padding: 0 1rem;
-  border: 1px solid red;
 }
 #Sobre .BoxTexto h5 {
   font-family: var(--fontSubTitulo);
@@ -42,6 +39,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 #Sobre .BoxTexto ul li svg {
   fill: #e51a2c;
@@ -69,7 +68,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 #Processo .BoxProcesso {
@@ -77,7 +75,6 @@
   position: relative;
   align-items: end;
   justify-content: space-around;
-  border: 1px solid red;
   width: 100%;
   overflow: hidden;
   padding: 0 1rem;
@@ -87,15 +84,15 @@
 }
 #Processo .BoxProcesso .BoxTextoProcesso {
   position: absolute;
-  top: 0;
+  top: 2rem;
   left: auto;
   right: auto;
   margin-top: 2rem;
   width: 100%;
   max-width: 500px;
-  border: 1px solid green;
   padding: 0 1rem;
   text-align: center;
+  text-shadow: 1px 1px 2px var(--colorPrimaria);
 }
 #Processo .BoxProcesso .BoxTextoProcesso h5 {
   font-family: var(--fontSubTitulo);
@@ -137,10 +134,10 @@
 
 #Preco .BoxTextoPreco {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   padding: 0 1rem;
-  border: 1px solid red;
-  margin: auto 0;
+  text-align: center;
+  margin: 0 auto;
 }
 #Preco .BoxTextoPreco h5 {
   font-family: var(--fontSubTitulo);
@@ -164,17 +161,14 @@
 }
 #Preco .BoxCartaoPreco {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
   width: 100%;
-  max-width: 600px;
-  border: 1px solid green;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 #Contato .BoxImagem {
   width: 100%;
   max-width: 600px;
-  border: 1px solid red;
   border-radius: 20px;
 }
 #Contato .BoxImagem img {
@@ -343,21 +337,25 @@ footer .Copy {
   padding: 1rem;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 878px) {
   #Sobre .conteinerSobre {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
-  #Preco .ConteinerPreco {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  #Sobre .conteinerSobre .BoxTexto {
+    max-width: 650px;
   }
-  #Contato .ConteinerContato {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  #Sobre .conteinerSobre .BoxTexto li {
+    margin: 0 auto;
+  }
+  #Preco .BoxTextoPreco {
+    width: 100%;
+    max-width: 600px;
+  }
+  #Contato .ConteinerContato * {
+    max-width: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -403,20 +401,23 @@ footer .Copy {
   #Preco .BoxTextoPreco h1 {
     font-size: calc(var(--sizeTitulo) / 1.5);
   }
-  #Contato .BoxImagem {
+  #Contato .ConteinerContato {
+    flex-direction: column;
+    align-items: center;
+  }
+  #Contato .ConteinerContato .BoxImagem {
     width: 100%;
     max-width: 600px;
-    border: 1px solid red;
     border-radius: 20px;
   }
-  #Contato .BoxImagem img {
+  #Contato .ConteinerContato .BoxImagem img {
     border-radius: 20px;
     width: 100%;
     height: auto;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  #Contato .Boxform h1 {
+  #Contato .ConteinerContato .Boxform h1 {
     font-size: calc(var(--sizeTitulo) / 1.5);
   }
   footer {

@@ -3,11 +3,9 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 300px;
-  border: 1px solid red;
   padding: 0 1rem;
 }
 .ElementoServico .BoxIcone {
-  border: 1px solid red;
   max-width: 33.333%;
 }
 .ElementoServico .BoxIcone img {
@@ -16,7 +14,6 @@
 }
 .ElementoServico .BoxText {
   max-width: 100%;
-  border: 1px solid blue;
 }
 .ElementoServico .BoxText h3 {
   font-family: var(--fontSubTitulo);
@@ -39,7 +36,6 @@
     min-width: 100%;
   }
   .ElementoServico .BoxIcone {
-    border: 1px solid red;
     max-width: 30%;
   }
   .ElementoServico .BoxText {

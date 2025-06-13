@@ -6,6 +6,14 @@ font-weight: var(--weightSubTitulo);
 color:var(--colorPrimaria);
 }
 
+@media screen and (max-width: 878px) {
+
+.ButtonNav{
+font-size: calc(var(--sizeSubtitulo) / 1.1);
+}
+
+}
+
 @media screen and (max-width: 768px) {
 
 .ButtonNav{

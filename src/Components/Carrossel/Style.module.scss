@@ -19,7 +19,7 @@ z-index: -1;
 width: 100%;
 height: 80vh;
 background: var(--colorPrimaria);
-transition: transform 0.5s ease-in-out;
+transition: transform 1.5s ease-in-out;
 
 .BoxConteudo{
 min-width: 100%;
@@ -57,9 +57,9 @@ display: flex;
 position: absolute;
 top: 0;
 left: 0;
+z-index: 100;;
 overflow: hidden;
 max-width: 650px;
-border: 1px solid green;
 margin-left: 4rem;
 margin-top: 4rem;
 
@@ -68,7 +68,7 @@ transition: transform 0.5s ease-in-out;
 .BoxConteudo{
 
 padding: 0 1rem;
-border: 1px solid blue;
+
 
 h5{
 font-family: var(--fontTitulo);
@@ -124,9 +124,43 @@ background-size: contain;
 }
 
 .ButtonLeft{
-left: 0;
+left: 0 ;
 background: url("../../assets/arrow-bg-left.png") no-repeat;
 background-size: contain;
+}
+
+}
+
+@media screen and (max-width: 878px) {
+
+.ConteinerCarrosel{
+
+.Carrosel{
+
+.ConteinerTexto{
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 100%;
+height: 100%;
+margin: 0 auto;
+
+.BoxConteudo{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+padding: 0 2rem;
+max-width: 80%;
+
+}
+
+}
+}
+
 }
 
 }
@@ -144,7 +178,6 @@ justify-content: center;
 min-width: 100%;
 height: 100%;
 margin: 0 auto;
-border: 1px solid red;
 
 .BoxConteudo{
 
@@ -154,7 +187,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
 
-padding: 0 2rem;
+padding: 0 1rem;
 
 h5{
 font-size: calc((--sizeText) / 1.5);

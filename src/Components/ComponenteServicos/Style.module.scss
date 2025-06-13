@@ -4,11 +4,9 @@ display: flex;
 flex-wrap: wrap;
 width: 100%;
 max-width: 300px;
-border: 1px solid red;
 padding: 0 1rem;
 
 .BoxIcone{
-border: 1px solid red;
 max-width: 33.333%;
 
 img{
@@ -21,7 +19,6 @@ height: auto;
 .BoxText{
 
 max-width: 100%;
-border: 1px solid blue;
 
 h3{
 font-family: var(--fontSubTitulo);
@@ -52,7 +49,6 @@ min-width: 100% ;
 
 
 .BoxIcone{
-border: 1px solid red;
 max-width: 30%;
 }
 

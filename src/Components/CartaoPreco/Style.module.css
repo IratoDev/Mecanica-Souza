@@ -1,52 +1,66 @@
-.BoxInfo {
-  border: 1px solid green;
-  width: 100%;
-  max-width: 45.333%;
+.CarroselPreco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: var(--colorPrimaria);
+  overflow: hidden;
+  border-radius: 20px;
   color: #fff;
 }
-.BoxInfo h3 {
+.CarroselPreco .Slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.CarroselPreco .Slide .BoxInfo {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.CarroselPreco .Slide .BoxInfo h3 {
   font-family: var(--fontSubTitulo);
   font-size: var(--sizeTexto);
   font-weight: var(--weightSubTitulo);
   color: #fff;
   margin-top: 0.5rem;
 }
-.BoxInfo h1 {
+.CarroselPreco .Slide .BoxInfo h1 {
   font-family: var(--fontSubTitulo);
   font-size: var(--sizeTitulo);
   font-weight: var(--weightSubTitulo);
   color: #fff;
+  margin-top: 1.5rem;
+}
+.CarroselPreco .Slide .BoxServicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.CarroselPreco .Slide .BoxServicos h3 {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeSubtitulo);
+  font-weight: var(--weightSubTitulo);
+  color: var();
+  margin-top: 0.5rem;
+}
+.CarroselPreco .Slide .BoxServicos p {
+  font-family: var(--fontSubTitulo);
+  font-size: var(--sizeTexto);
+  font-weight: var(--weightSubTitulo);
+  color: #fff;
+  margin-top: 0.5rem;
 }
 
-.BoxServicos {
-  position: relative;
-  border: 1px solid blue;
-  width: 100%;
-  max-width: 63.333%;
-  padding-bottom: 4rem;
-}
-.BoxServicos ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.BoxServicos ul li {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 40%;
-  border: 1px solid #ccc;
-  color: #fff;
-}
-.BoxServicos ul li svg {
-  fill: #e51a2c;
-}
-.BoxServicos button {
-  position: absolute;
-  bottom: 0;
-  right: 2rem;
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: var(--colorSecundaria);
 }
 
 @media screen and (max-width: 768px) {

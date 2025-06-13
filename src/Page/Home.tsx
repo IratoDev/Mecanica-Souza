@@ -4,7 +4,7 @@ import { ComponeteServico } from "../Components/ComponenteServicos/ComponeteServ
 import { ButtonComponet } from "../Components/Ux/Button/ButtonComponet"
 import { CarroselGaleria } from "../Components/componetGaleria/ComponeteGaleria"
 import { ComponeteProcesso } from "../Components/ComponenteProcesso/ComponeteProcesso"
-import { CartaoPreco } from "../Components/CartaoPreco/CartaoPreco"
+import { CarrosselPreco } from "../Components/CartaoPreco/CartaoPreco"
 
 import carroImg from "../assets/Carro.png";
 import BgForm from "../assets/form-bg.jpg";
@@ -38,6 +38,9 @@ import { PiSparkleFill } from "react-icons/pi";
 
 import Style from "./Style.module.css"
 
+
+
+
 export function Home(){
 
 return(
@@ -65,9 +68,9 @@ return(
 </section>
 
 {/*Sobre*/}
-<section id={Style.Sobre} className="py-10 px-5 md:px-10 ">
+<section id={Style.Sobre} className="py-10 px-5 md:px-10 mb-6">
 
-<div className={`${Style.conteinerSobre} flex justify-between flex-wrap gap-4`}>
+<div className={`${Style.conteinerSobre} flex justify-between gap-4`}>
     <div className={Style.BoxImagem}>
         <img alt="foto carro" src={carroImg}/>
     </div>
@@ -80,7 +83,7 @@ return(
             <li><PiSparkleFill /> Atendimento rápido e especializado</li>
             <li><PiSparkleFill /> Equipamentos modernos e peças de qualidade</li>
         </ul>
-        <div className="flex items-center gap-8 flex-row">
+        <div className="flex items-center gap-8 flex-row justify-center">
             <ButtonComponet text="Read More"/>
 
             <div className="flex items-center gap-2 py-5">
@@ -97,14 +100,14 @@ return(
 </section>
 
 {/*Galeria*/}
-<section id={Style.Galeria} className="py-10 px-5 md:px-10 ">
+<section id={Style.Galeria} className="py-10 px-5 md:px-10 mb-12">
     <div className={Style.BoxGaleria}>
         <CarroselGaleria/>
     </div>
 </section>
 
 {/*Processos*/}
-<section id={Style.Processo} className="py-10 px-5 md:px-10">
+<section id={Style.Processo} className="py-10 px-5 md:px-10 mb-6">
     <div className="flex flex-wrap justify-between gap-6 w-full">
         
        <div className={Style.BoxProcesso}>
@@ -136,7 +139,7 @@ return(
 </section>
 
 {/*Preços*/}
-<section id={Style.Preco} className="py-10 px-5 md:px-10">
+<section id={Style.Preco} className="py-10 px-5 md:px-10 mb-12">
     <div className={`${Style.ConteinerPreco} flex flex-wrap justify-between gap-6`}>
         <div className={Style.BoxTextoPreco}>
             <h5>Preços</h5>
@@ -146,19 +149,16 @@ return(
         </div>
 
         <div className={Style.BoxCartaoPreco}>
-            <CartaoPreco tempo="40min" titulo="serviço A" preco="$
-49.00" option1="serviço" option2="serviço" option3="serviço" option4="serviço" option5="serviço" option6="serviço"/>
-            <CartaoPreco tempo="40min" titulo="serviço B" preco="$
-49.00" option1="serviço" option2="serviço" option3="serviço" option4="serviço" option5="serviço" option6="serviço"/>
-            <CartaoPreco tempo="40min" titulo="serviço C" preco="$
-49.00" option1="serviço" option2="serviço" option3="serviço" option4="serviço" option5="serviço" option6="serviço"/>
+
+    <CarrosselPreco/>
+      
         </div>
     </div>
 </section>
 
 {/*Contato*/}
-<section id={Style.Contato} className="py-10 px-5 md:px-10">
-    <div className={`${Style.ConteinerContato} flex  flex-wrap justify-between gap-6 `}>
+<section id={Style.Contato} className="py-10 px-5 md:px-10 mb-6">
+    <div className={`${Style.ConteinerContato} flex  justify-between gap-6 `}>
         <div className={Style.BoxImagem}><img alt="img-contato" src={BgForm}/></div>
 
         <div className={Style.Boxform}>

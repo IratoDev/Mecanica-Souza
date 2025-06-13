@@ -1,9 +1,31 @@
 
-.BoxInfo{
-border: 1px solid green;
-width: 100%;
-max-width: 45.333%;
+.CarroselPreco{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 3rem 1rem;
+
+background-color: var(--colorPrimaria);
+overflow: hidden;
+border-radius: 20px;
+
 color: #fff;
+
+.Slide{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+
+.BoxInfo{
+
+width: 100%;
+color: #fff;
+text-align: center;
 
 h3{
 font-family: var(--fontSubTitulo);
@@ -18,36 +40,38 @@ font-family: var(--fontSubTitulo);
 font-size: var(--sizeTitulo);
 font-weight: var(--weightSubTitulo);
 color: #fff;
+margin-top: 1.5rem;
 }
 
 }
 
 .BoxServicos{
 
-position: relative;
-border: 1px solid blue;
-width: 100%;
-max-width: 63.333%;
-padding-bottom: 4rem;
-
-ul{
-
 display: flex;
+flex-direction: column;
 justify-content: center;
-flex-wrap: wrap;
-gap: 0.5rem;
-
-li{
-display: inline-flex;
 align-items: center;
-justify-content: center;
-gap: 0.5rem;
-width: 40%;
-border: 1px solid #ccc;
-color: #fff;
+width: 100%;
+text-align: center;
 
-svg{
-fill: #e51a2c;
+margin-top: 1rem;
+
+h3{
+font-family: var(--fontSubTitulo);
+font-size: var(--sizeSubtitulo);
+font-weight: var(--weightSubTitulo);
+color: var();  
+margin-top: 0.5rem;  
+}
+
+p{
+font-family: var(--fontSubTitulo);
+font-size: var(--sizeTexto);
+font-weight: var(--weightSubTitulo);
+color: #fff;  
+margin-top: 0.5rem;  
+}
+
 
 }
 
@@ -55,14 +79,10 @@ fill: #e51a2c;
 
 }
 
-button{
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
 
-position: absolute;
-bottom: 0;
-right: 2rem;
-
-}
-
+color: var(--colorSecundaria);
 }
 
 @media screen and (max-width: 768px) {

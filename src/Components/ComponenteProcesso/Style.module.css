@@ -3,17 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #fff;
 }
 .ComponenteProcesso .BoxIcone {
-  border: 1px solid red;
   background-color: #fff;
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 0.5rem;
 }
 .ComponenteProcesso .BoxTexto {
-  border: 1px solid blue;
   text-align: center;
   padding: 0 0.5rem;
 }

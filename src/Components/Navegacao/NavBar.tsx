@@ -17,20 +17,20 @@ export function NavBar() {
         </div>
 
         {/* Botão mobile */}
-        <div className="md:hidden border border-red-500">
+        <div className="md:hidden border border-red-500 p-2">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className=" focus:outline-none"
           >
-            {menuOpen ? <HiOutlineX size={32} className="fill-black"/> : <HiOutlineMenu size={32} className="fill-black"/>}
+            {menuOpen ? <HiOutlineX size={42} className="fill-black"/> : <HiOutlineMenu size={42} className="fill-black"/>}
           </button>
         </div>
 
         {/* Navegação Desktop */}
-        <div className="hidden md:flex gap-4">
+        <div className="hidden md:flex mb:gap-4 gap-2">
           <button className={Style.ButtonNav}>Home</button>
-          <button className={Style.ButtonNav}>Sobre</button>
           <button className={Style.ButtonNav}>Serviços</button>
+          <button className={Style.ButtonNav}>Sobre</button>
           <button className={Style.ButtonNav}>Galeria</button>
           <button className={Style.ButtonNav}>Processos</button>
           <button className={Style.ButtonNav}>Preços</button>
@@ -47,8 +47,8 @@ export function NavBar() {
       {menuOpen && (
         <div className="flex flex-col justify-center items-center gap-4 pb-20 md:hidden h-screen z-50">
           <button className={Style.ButtonNav}>Home</button>
-          <button className={Style.ButtonNav}>Sobre</button>
           <button className={Style.ButtonNav}>Serviços</button>
+          <button className={Style.ButtonNav}>Sobre</button>
           <button className={Style.ButtonNav}>Galeria</button>
           <button className={Style.ButtonNav}>Processos</button>
           <button className={Style.ButtonNav}>Preços</button>

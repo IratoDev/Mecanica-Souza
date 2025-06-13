@@ -5,9 +5,7 @@
 .BoxImagem{
 
 width: 100%;
-max-width: 500px;
-margin: 0 auto;
-border: 1px solid red;
+max-width: 450px;
 
 img{
 width: 100%;
@@ -22,7 +20,6 @@ object-fit: cover;
 width: 100%;
 max-width: 650px;
 padding: 0 1rem;
-border: 1px solid red;
 
 h5{
 font-family: var(--fontSubTitulo);
@@ -52,6 +49,7 @@ li{
 display: flex;
 align-items: center;
 gap: 0.5rem;
+width:fit-content;
 
 svg{
 fill: #e51a2c;
@@ -100,8 +98,6 @@ font-weight: var(--weightSubTitulo);
 display: flex;
 align-items: center;
 justify-content: center;
-border: 1px solid red;
-
 
 }
 
@@ -116,7 +112,6 @@ display: flex;
 position: relative;
 align-items: end;
 justify-content: space-around;
-border: 1px solid red;
 width: 100%;
 overflow: hidden;
 
@@ -127,16 +122,16 @@ color: #fff;
 
 .BoxTextoProcesso{
 position: absolute;
-top: 0;
+top: 2rem;
 left: auto;
 right: auto;
 margin-top: 2rem;
 
 width: 100%;
 max-width: 500px;
-border: 1px solid green;
 padding: 0 1rem;
 text-align: center;
+text-shadow: 1px 1px 2px var(--colorPrimaria);
 
 h5{
 font-family: var(--fontSubTitulo);
@@ -189,11 +184,10 @@ height: 100%;
 .BoxTextoPreco{
 
 width: 100%;
-max-width: 600px;
+max-width: 500px;
 padding: 0 1rem;
-border: 1px solid red;
-
-margin: auto 0;
+text-align: center;
+margin: 0 auto;
 
 h5{
 font-family: var(--fontSubTitulo);
@@ -223,11 +217,10 @@ margin-bottom: 2rem;
 .BoxCartaoPreco{
 
 display: flex;
-flex-direction: column;
-gap: 1rem;
 width: 100%;
-max-width: 600px;
-border: 1px solid green;
+max-width: 500px;
+
+margin: 0 auto;
 
 }
 
@@ -239,7 +232,6 @@ border: 1px solid green;
 
 width: 100%;
 max-width: 600px;
-border: 1px solid red;
 border-radius: 20px;
 
 img{
@@ -449,32 +441,42 @@ padding: 1rem;
 }
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 878px) {
     
 #Sobre{
     .conteinerSobre{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
+
+        .BoxTexto{
+        max-width: 650px;
+        li{
+            margin: 0 auto;
+        }
+        }
     }
 }   
 
 #Preco{
 
-    .ConteinerPreco{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+.BoxTextoPreco{
 
+width: 100%;
+max-width: 600px;
+
+}
 }
 
 #Contato{
 
     .ConteinerContato{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    
+
+        *{
+            max-width: none;
+        }
     }
 
 }
@@ -548,11 +550,15 @@ font-size: calc(var(--sizeTitulo) / 1.5);
 
 #Contato{
 
+.ConteinerContato{
+
+flex-direction: column;
+align-items: center;
+
 .BoxImagem{
 
 width: 100%;
 max-width: 600px;
-border: 1px solid red;
 border-radius: 20px;
 
 img{
@@ -573,6 +579,7 @@ font-size: calc(var(--sizeTitulo) / 1.5);
 }
 
 
+}
 }
 
 }
