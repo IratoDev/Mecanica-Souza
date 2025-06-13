@@ -4,10 +4,6 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { ButtonComponet } from '../Ux/Button/ButtonComponet';
 import { FaClock } from 'react-icons/fa6';
 import Style from './Style.module.css';
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 
 const ComponentePreco = [

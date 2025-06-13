@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay,EffectCreative } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-creative";
 
 import Imagem1 from "../../assets/Img_local.jpg";
 import Imagem2 from "../../assets/img_Alinhamento.jpeg";
