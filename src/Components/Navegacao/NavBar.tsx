@@ -54,7 +54,7 @@ export function NavBar() {
           <button className={Style.ButtonNav}>Processos</button>
           <button className={Style.ButtonNav}>Preços</button>
           <button className={Style.ButtonNav}>Contato</button>
-          <ButtonComponet text="Marcar consulta" />
+          <ButtonComponet onClick={()=>MensagemWhatsApp("Olá gostaria de marcar um orçamento")} text="Marcar consulta" />
         </div>
       )}
     </header>
